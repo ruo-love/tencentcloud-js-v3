@@ -1,24 +1,45 @@
 {
-  "name": "tencentcloudapi_v3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@zrcode/tencentcloud-js-v3",
+  "version": "1.0.3",
+  "private": false,
+  "module": "dist/main.js",
+  "types": "dist/type.d.ts",
+  "main": "dist/main.js",
+  "description": "腾讯云API js V3签名",
+  "author": "zrcode",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.config.js",
     "build": "webpack --config webpack.pro.config.js"
   },
-  "keywords": [],
-  "author": "",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "type.d.ts"
+  ],
+  "keywords": [
+    "腾讯云",
+    "v3签名",
+    "zrcode",
+    "zrcode/tencentcloud-jsv3"
+  ],
   "license": "ISC",
   "devDependencies": {
-    "ts-loader": "^9.4.4",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1",
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
     "babel-loader": "^9.1.2",
-    "typescript": "^4.9.5"
+    "ts-loader": "^9.4.4",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@zrcode/tencentcloud-js-v3": "^1.0.1",
+    "@zrcode/tencentcloud-jsv3": "^1.0.0",
+    "crypto-js": "^4.1.1"
   }
 }
