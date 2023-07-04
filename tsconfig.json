@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "module": "ESNEXT",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "baseUrl": ".",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "noEmitHelpers": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/*.ts", "src/**/**/*.ts", "src/**/**/*.test.ts", "index.d.ts", "type.d.ts"],
+  "exclude": ["node_modules"]
+}
