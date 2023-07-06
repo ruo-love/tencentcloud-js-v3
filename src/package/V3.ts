@@ -1,22 +1,22 @@
-import { V3Options } from "@zrcode/tencentcloud-js-v3"
-import crypto from "crypto-js"
-
+const HmacSHA256 = require("crypto-js/hmac-sha256")
+const SHA256 = require("crypto-js/sha256")
+const encHex = require("crypto-js/enc-hex")
 function sha256(message: string, secret = "", hex: boolean = false) {
-  const hmac = crypto.HmacSHA256(message, secret)
+  const hmac = HmacSHA256(message, secret)
   let hexHmac = hmac
   if (hex) {
     // 将 HMAC 值转换为十六进制字符串
-    hexHmac = hmac.toString(crypto.enc.Hex)
+    hexHmac = hmac.toString(encHex)
   }
   return hexHmac
 }
 
 function getHash(message: string) {
   // 计算 SHA-256 哈希值
-  const hash = crypto.SHA256(message)
+  const hash = SHA256(message)
 
   // 将哈希值转换为十六进制字符串
-  const hexHash = hash.toString(crypto.enc.Hex)
+  const hexHash = hash.toString(encHex)
 
   return hexHash
 }
