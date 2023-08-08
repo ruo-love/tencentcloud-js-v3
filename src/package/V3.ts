@@ -28,6 +28,7 @@ function getDate(timestamp: number) {
   const day = ("0" + date.getUTCDate()).slice(-2)
   return `${year}-${month}-${day}`
 }
+
 /**
  * @description: 腾讯云API V3签名
  * @param {V3Options} config
